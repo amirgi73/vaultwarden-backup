@@ -6,7 +6,3 @@ Wants=network-online.target
 [Service]
 Type=oneshot
 ExecStart=/opt/vaultwarden-backup.sh
-User=root
-# Sicherheitshärtung
-PrivateTmp=true
-NoNewPrivileges=true
