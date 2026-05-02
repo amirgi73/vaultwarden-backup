@@ -1,0 +1,12 @@
+[Unit]
+Description=Vaultwarden verschlüsseltes Backup nach Backblaze B2
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/vaultwarden-backup.sh
+User=root
+# Sicherheitshärtung
+PrivateTmp=true
+NoNewPrivileges=true
